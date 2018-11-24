@@ -2,23 +2,14 @@
 <head>
     <meta charset="utf-8">
     <title>Cadastro de cliente</title>
-    <script src="angular.js"></script>
-    <script>
-        (function() {
-            var name = "myApp",
-                requires = [],
-                myApp = null;
-            myApp = angular.module(name, requires);
+    <script src="vendor/angular.js"></script>
+    <script src="vendor/angular-route.js"></script>
 
-            myApp.controller("AppCtrl", function($scope){
-                $scope.teste = function() {
-                    console.log("teste");
-                }
-            });
-        }());
-    </script>
+    <script src="app/app.module.js"></script>
+    <script src="app/layout/shell.module.js"></script>
+    <script src="app/layout/shell.ctrl.js"></script>
 </head>
-<body ng-controller="AppCtrl">
-    <button ng-click="teste()">Olá</button>
+<body>
+    <ng-include src="'app/layout/shell.html'"></ng-include>
 </body>
 </html>
