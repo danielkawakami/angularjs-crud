@@ -1,0 +1,24 @@
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de cliente</title>
+    <script src="angular.js"></script>
+    <script>
+        (function() {
+            var name = "myApp",
+                requires = [],
+                myApp = null;
+            myApp = angular.module(name, requires);
+
+            myApp.controller("AppCtrl", function($scope){
+                $scope.teste = function() {
+                    console.log("teste");
+                }
+            });
+        }());
+    </script>
+</head>
+<body ng-controller="AppCtrl">
+    <button ng-click="teste()">Olá</button>
+</body>
+</html>
