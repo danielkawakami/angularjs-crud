@@ -1,0 +1,33 @@
+<style>
+    .odd {
+        background-color: tan;
+    }
+    .even {
+        background-color: gray;
+    }
+</style>
+<div ng-controller="ClientData">
+    <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Weight</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="client in clients" ng-class="$odd ? 'odd' : 'even'">
+                    <td>{{$index+1}}</td>
+                    <td>{{client.id}}</td>
+                    <td>{{client.name}}</td>
+                    <td>{{client.age}}</td>
+                    <td>{{client.weight}}</td>
+                    <td>{{client.position}}</td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+    
